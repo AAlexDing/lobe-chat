@@ -93,6 +93,7 @@ export class LobeGoogleAI implements LobeRuntimeAI {
         .getGenerativeModel(
           {
             generationConfig: {
+              responseModalities: ['Text', 'Image'],
               maxOutputTokens: payload.max_tokens,
               temperature: payload.temperature,
               topP: payload.top_p,
